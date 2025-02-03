@@ -36,6 +36,10 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       if (value == "C") {
         _expression = "";
         _result = "0";
+      } else if (value == "⌫") {
+        if (_expression.isNotEmpty) {
+          _expression = _expression.substring(0, _expression.length - 1);
+        }
       } else if (value == "=") {
         try {
           final expression = Expression.parse(_expression);
@@ -96,6 +100,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
             ['4', '5', '6', '*'],
             ['1', '2', '3', '-'],
             ['C', '0', '=', '+'],
+            ['⌫'], // Backspace button row
           ].map(
             (row) => Row(
               children: row.map((value) => _buildButton(value)).toList(),
