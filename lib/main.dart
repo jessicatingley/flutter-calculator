@@ -11,7 +11,7 @@ class CalculatorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Calculator - Your Name',
+      title: 'Calculator',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -67,7 +67,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Calculator - Your Name')),
+      appBar: AppBar(title: const Text('Calculator')),
       body: Column(
         children: [
           Expanded(
@@ -86,7 +86,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               alignment: Alignment.bottomRight,
               child: Text(
                 _result,
-                style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
               ),
             ),
           ),
